@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-small.png" />
+
+    <script src="scripts/react.production.min.js"></script>
+    <script src="scripts/react-dom.production.min.js"></script>
+    <script src="scripts/babel-standalone"></script>
+
+    <title>PlayCheck's blog</title>
+</head>
+<body>
+    
+    <header>
+        <h1>PlayCheck</h1>
+    </header>
+
+    <div id="root"></div>
+
+    <footer>
+        <p>&copy; 2025 PlayCheck</p>
+    </footer>
+
+
+
+    <!-- scripts -->
+
+    <script type="text/babel">
+        function App() {
+            return (
+                <div>
+                    <div id="intro"></div>
+                    <div id="blog-grid"></div>
+                </div>
+            );
+        }
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+        function IntroR() {
+            return (
+                <div class="intro-div">
+                    <h2>Welcome to PlayCheck's blog</h2>
+                    <p>
+                        Hi ! We're PlayCheck, and this is our blog page. We talk about video games here. Only the 
+                        most passionate might find their place on this blog page. There is no room for corporate 
+                        slack, and no place for souless cash grabs. If you understand the rules, please proceed 
+                        to our thoughts on everything that is gaming.
+                    </p>
+                    <p>
+                        We will very soon be introducing a personal forum for all users to interact, along with 
+                        comments under the blogs. Until then, please use the following reddit page for all your 
+                        discussion needs.
+                    </p>
+                </div>
+            );
+        }
+        ReactDOM.render(<IntroR />, document.getElementById('intro'));
+
+
+        function BlogGridR() {
+            return (
+                <div class="blog-grid-div">
+                    <div id="post-1"></div>    
+                    <div id="post-2"></div>    
+                    <div id="post-3"></div>    
+                    <div id="post-4"></div>    
+                    <div id="post-5"></div>    
+                    <div id="post-6"></div>    
+                </div>
+            );
+        }
+        ReactDOM.render(<BlogGridR />, document.getElementById('blog-grid'));
+
+
+        function BlogR(props) {
+            return (
+                <div class="blog-div">
+                    <img src={props.src} alt="game cover art"></img>
+                    <h3>{props.game}</h3>
+                    <p>{props.desc}</p>
+                </div>
+            );
+        }
+
+        // render first blog post
+        ReactDOM.render(<BlogR
+            game="Castlevania: Symphony of the night" 
+            desc="I love this game" 
+            src="images/castlevania.webp" 
+        />, document.getElementById('post-1'));
+
+        // render second blog
+        ReactDOM.render(<BlogR 
+            game="Elden ring" 
+            desc="I love this game" 
+            src="images/elden-ring.webp"
+        />, document.getElementById('post-2'));
+        
+        // render third blog
+        ReactDOM.render(<BlogR
+            game="Celeste"
+            desc="I love this game"
+            src="images/celeste.webp"
+        />, document.getElementById('post-3'));
+        
+        // render fourth blog
+        ReactDOM.render(<BlogR
+            game="Hollow Knight"
+            desc="I love this game"
+            src="images/hollow-knight.webp"
+        />, document.getElementById('post-4'));
+
+        // render fifth blog
+        ReactDOM.render(<BlogR
+            game="Ultrakill"
+            desc="I love this game"
+            src="images/ultrakill.jpeg"
+        />, document.getElementById('post-5'));
+
+        // render sixth blog
+        ReactDOM.render(<BlogR
+            game="Pizza Tower"
+            desc="I love this game"
+            src="images/pizza-tower.jpg"
+        />, document.getElementById('post-6'));
+    </script>
+</body>
+</html>
