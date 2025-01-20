@@ -79,9 +79,11 @@
         function BlogR(props) {
             return (
                 <div class="blog-div">
-                    <img src={props.src} alt="game cover art"></img>
-                    <h3>{props.game}</h3>
-                    <p>{props.desc}</p>
+                    <a href={props.href}>
+                        <img src={props.src} alt="game cover art"></img>
+                        <h3>{props.game}</h3>
+                        <div class="blog-desc-div">{props.desc}</div>
+                    </a>
                 </div>
             );
         }
@@ -89,42 +91,61 @@
         // render first blog post
         ReactDOM.render(<BlogR
             game="Castlevania: Symphony of the night" 
-            desc="I love this game" 
+            desc="The most significant metroidvania and the most influential installment of the castlevania 
+                series. Paired with wonderful visuals, interesting combat, a deep running lore, and the 
+                phenomenal soundtrack that sets the mood for a moonlit night, this game is one of our all time 
+                favourites" 
             src="images/castlevania.webp" 
+            href="https://code-canvas.blog/"
         />, document.getElementById('post-1'));
 
         // render second blog
-        ReactDOM.render(<BlogR 
-            game="Elden ring" 
-            desc="I love this game" 
-            src="images/elden-ring.webp"
+        ReactDOM.render(<BlogR
+            game="Ultrakill"
+            desc="Ultrakill is insane. High octane is an understanement. Playing this game will have give you
+            parkinsons by the end of a stage. Ultrakill is a game made out of glitches. This game promotes the
+            player to break it in every way imaginable, and to beat each stage as the baddest gunslinger out there
+            The suprisingly fleshed out storyline is the cherry on the top, because hell yeah, I'm the killer 
+            robot who's gonna empty hell. Oh and the visuals are actually pretty sweet on the eyes. The best 
+            indie game in quite a long time, we will be playing this for a while."
+            src="images/ultrakill.jpeg"
         />, document.getElementById('post-2'));
         
         // render third blog
         ReactDOM.render(<BlogR
             game="Celeste"
-            desc="I love this game"
+            desc="Classic platformer with a non existent storyline that provides insanely long hours of quality
+            content. Seriously there are way too many stages in this game, all feeling clear and consise. The 
+            game makes incredibly good use of each and every mechanic, and takes the player for a spin. You 
+            never know what this game is going to pull next"
             src="images/celeste.webp"
         />, document.getElementById('post-3'));
         
         // render fourth blog
         ReactDOM.render(<BlogR
             game="Hollow Knight"
-            desc="I love this game"
+            desc="The spiritual successor to Castlevania: Symphony of the night, and the best metroidvania modern
+            metroidvania. This might be the most hyped game and is almost the face of indie video game development.
+            Everything hollow knight can pull with such a simplistic combat system is incredible. The visual are
+            mesmerising and all lore will have you sitting on wiki pages for hours. The map is incredibly huge
+            and polished. This game has it all."
             src="images/hollow-knight.webp"
         />, document.getElementById('post-4'));
 
         // render fifth blog
-        ReactDOM.render(<BlogR
-            game="Ultrakill"
-            desc="I love this game"
-            src="images/ultrakill.jpeg"
+        ReactDOM.render(<BlogR 
+            game="Elden ring" 
+            desc="A celebration on the biggest scale for more than a decade of souls-like, this game is THE 
+            experience for a first time souls player. Without a doubt, best looking game we have ever 
+            played, and ignoring the janky hitbox data and dodging, a damm fun one at that. Bursting with 
+            content wherever you look" 
+            src="images/elden-ring.webp"
         />, document.getElementById('post-5'));
 
         // render sixth blog
         ReactDOM.render(<BlogR
             game="Pizza Tower"
-            desc="I love this game"
+            desc="They have the pizza delivery theme from spiderman 2 for the PS2"
             src="images/pizza-tower.jpg"
         />, document.getElementById('post-6'));
     </script>

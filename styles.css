@@ -93,6 +93,12 @@ footer p {
     background: #b8f1ff;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    height: 550px;
+}
+
+.blog-desc-div {
+    height:150px;
+    overflow: auto;
 }
 
 .blog-div:hover {
@@ -103,4 +109,13 @@ footer p {
     border-radius: 10px;
     height: 330px;
     width: 330px;
+}
+
+.blog-div a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog-div h3 {
+    color: #046c98;
 }
